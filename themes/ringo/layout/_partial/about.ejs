@@ -1,0 +1,22 @@
+<div class="col-12" id="main" role="main">
+    <article class="post post-atpost" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-title">
+            <h1 class="post-title post-title-atpage" itemprop="name headline">
+                <a itemprop="url" href="<%- url_for(post.path) %>">
+                    <%= post.title %>
+                </a>
+            </h1>
+        </div>
+        <div class="post-content" itemprop="articleBody">
+            <%- post.content %>
+
+        </div>
+        <% if (post.tags && post.tags.length) { %>
+            <p itemprop="keywords" class="tags">
+                <% post.tags.each(function(tag) { %>
+                    <a href="<%- url_for(tag.path) %>"> <%= tag.name %> </a>
+                <% }) %>
+            </p>
+        <% } %>
+    </article>
+</div>
