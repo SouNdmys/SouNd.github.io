@@ -183,3 +183,27 @@ html {
   color: #666;
   padding-left: 40px; /* 进一步增加缩进 */
 }
+
+/*
+ * ===============================================
+ * 最终全局字体方案 - Maple Mono SC
+ * ===============================================
+ */
+
+/* 1. 为网站正文 (body) 应用“细体” */
+body {
+  font-family: "Maple Mono SC NF", "霞鹜文楷", sans-serif !important;
+  font-weight: 300 !important; /* 精确对应我们加载的 Light 300 字重 */
+}
+
+/* 2. 为所有标题 (h1, h2, h3...) 应用“特粗体” */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Maple Mono SC NF", "霞鹜文楷", sans-serif !important;
+  font-weight: 800 !important; /* 精确对应我们加载的 ExtraBold 800 字重 */
+}
+
+/* 3. 如果您想让某些文字是“中等粗细”，可以单独设置 */
+strong, b {
+  font-family: "Maple Mono SC NF", "霞鹜文楷", sans-serif !important;
+  font-weight: 500 !important; /* 精确对应我们加载的 Medium 500 字重 */
+}
