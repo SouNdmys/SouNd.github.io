@@ -1,0 +1,6 @@
+/* 强制代码块内的长单词或长字符串换行 */
+pre, code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+}
