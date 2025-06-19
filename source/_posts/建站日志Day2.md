@@ -41,9 +41,10 @@ git clone https://github.com/HeliumOI/hexo-theme-ringo.git themes/ringo
 **清理内容**：删除了 `source/_posts` 文件夹中由 `hexo init` 默认生成的 `hello-world.md` 文章。
 
 **修改站点信息**：在根 `_config.yml` 文件中，更新了 `title`, `author`, `url` 等核心字段，以确保站点信息和链接生成正确。
+
 ---
 
-### **核心概念：两个 `_config.yml` 的区别**
+#### **核心概念：两个 `_config.yml` 的区别**
 理解这两个配置文件的不同作用，是高效配置 Hexo 的关键。
 
 #### 1. 根目录的  `_config.yml`
@@ -150,6 +151,7 @@ git clone https://github.com/HeliumOI/hexo-theme-ringo.git themes/ringo
 通过 VS Code 全局搜索，最终在 `themes/ringo/layout/_partial/header.ejs` 文件中定位到硬编码的内联样式 `style="...font-size:10px"`。
 
 **解决方案**：直接编辑 `header.ejs` 文件，删除了 `<span>` 标签内写死的 `style` 属性，使得外部 CSS 得以正常生效。
+
 ---
 
 ## 技术知识沉淀

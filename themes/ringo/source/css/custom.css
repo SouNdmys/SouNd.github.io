@@ -34,6 +34,7 @@ pre, code {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
+  text-align: center;
 }
 
 /* 3. 目录列表和链接样式 */
@@ -133,4 +134,52 @@ html {
   color: #000;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 增加一个非常轻微的阴影 */
   transform: translateY(-2px); /* 向上轻微浮动 */
+}
+
+
+/*
+ * ===============================================
+ * TOC 目录层级样式 (分级字体粗细和缩进)
+ * ===============================================
+ */
+
+/* 默认（最细）的链接样式 - 应用到所有层级 */
+.floating-toc .toc-link {
+  font-weight: 400; /* 400 是 normal (常规) 粗细 */
+  color: #555;
+  text-decoration: none;
+  display: block;
+  padding: 5px 0;
+  transition: all 0.2s ease-in-out;
+  padding-left: 10px; /* 基础缩进 */
+  border-left: 2px solid transparent; /* 准备一个透明的左边框，用于高亮 */
+}
+
+/* 鼠标悬浮时，所有层级都变色 */
+.floating-toc .toc-link:hover {
+  color: #000;
+  background-color: #f0f0f0;
+  border-left-color: #aaa; /* 悬浮时高亮左边框 */
+}
+
+
+/* -- 层级化样式 -- */
+
+/* 二级标题 (##) 对应的目录项 */
+.floating-toc .toc-level-2 > .toc-link {
+  font-weight: 700; /* 设为较粗 (Bold) */
+  color: #333;
+}
+
+/* 三级标题 (###) 对应的目录项 */
+.floating-toc .toc-level-3 > .toc-link {
+  font-weight: 550; /* 设为中等粗细 (Medium) */
+  padding-left: 25px; /* 增加缩进，体现层级 */
+}
+
+/* 四级标题 (####) 对应的目录项 */
+.floating-toc .toc-level-4 > .toc-link {
+  font-weight: 400; /* 设为常规粗细 (Normal) */
+  color: #666;
+  padding-left: 40px; /* 进一步增加缩进 */
 }
