@@ -1,1 +1,9 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<div class="post-main-content">
+    <%- partial('_partial/article', {post: page, index: false}) %>
+</div>
+
+<% if (page.toc) { %>
+    <aside class="floating-toc">
+        <div class="toc-title">Table of Contents</div>
+        <div id="toc-container"></div>  </aside>
+<% } %>

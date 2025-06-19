@@ -1,6 +1,7 @@
 ---
 title: 建站日志Day1
 date: 2025-06-19 14:35:55
+toc: true
 tags:
   - Hexo
   - Git
@@ -11,7 +12,6 @@ categories:
 
 ## 建站Day1日志
 
-<!-- toc -->
 ---
 
 ### **阶段一：环境准备**

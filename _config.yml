@@ -103,3 +103,19 @@ theme: ringo
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+#===============================================================
+# Markdown Renderer Settings (Markdown 渲染器设置)
+#===============================================================
+marked:
+  gfm: true
+  pedantic: false
+  sanitize: false
+  tables: true
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  autolink: true
+  headerIds: true         
+  modifyAnchors: 2       
