@@ -5,8 +5,9 @@ language: zh-CN
 # main menu navigation
 menu:
   Home: /
-  Archives: /archives/
+  Categories: /categories/
   Tags: /tags/
+  Archives: /archives/
   About: /about/
 
 # Highlight.js

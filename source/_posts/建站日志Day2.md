@@ -1,6 +1,7 @@
 ---
 title: 建站日志Day2
 date: 2025-06-19 15:02:03
+toc: true
 tags:
   - Hexo
   - Git

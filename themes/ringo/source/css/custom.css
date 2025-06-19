@@ -71,3 +71,66 @@ pre, code {
 html {
   scroll-behavior: smooth;
 }
+
+/*
+ * 标签页/分类页样式
+ */
+
+/* 选中列表中的每一个项目 (<li>) */
+.post-archive li {
+  display: inline-block; /* 让它像一个可设置边距的“小块” */
+  margin: 5px;         /* 在每个“小块”周围增加 5px 的外边距 */
+}
+
+/* 美化列表项中的链接 (<a>) */
+.post-archive li a {
+  display: block;            /* 让链接填满整个 <li> 区域 */
+  padding: 6px 12px;       /* 增加内边距 */
+  background-color: #f2f2f2; /* 设置浅灰色背景 */
+  border: 1px solid #e0e0e0;  /* 设置细边框 */
+  border-radius: 4px;        /* 设置圆角 */
+  text-decoration: none;     /* 去掉下划线 */
+  color: #333;              /* 设置字体颜色 */
+  transition: all 0.2s ease; /* 增加过渡动画 */
+}
+
+/* 鼠标悬浮时的样式 */
+.post-archive li a:hover {
+  background-color: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+/*
+ * ===============================================
+ * MUJI 风格标签页样式
+ * ===============================================
+ */
+.post-archive a {
+  display: inline-block;
+  margin: 6px; /* 稍微调整间距 */
+  padding: 7px 14px; /* 调整内边距，让胶囊更饱满 */
+
+  /* 核心：MUJI 风格的配色和质感 */
+  background-color: #f9f8f5; /* 一种非常浅的、温暖的米白色，代替纯白 */
+  border: 1px solid #e5e5e5;  /* 使用更柔和的灰色边框 */
+  color: #656565;              /* 使用柔和的深灰色字体，代替纯黑 */
+
+  /* 字体微调：稍微变大、变粗一点 */
+  font-size: 15px !important;    /* 字体比默认的14px大一点点 */
+  font-weight: 500 !important;   /* 中等粗细，比普通文字粗，又比纯黑体细 */
+
+  /* 其他细节 */
+  border-radius: 5px;        /* 圆角 */
+  text-decoration: none;     /* 去掉下划线 */
+  transition: all 0.2s ease-in-out; /* 保留过渡动画 */
+}
+
+/* 鼠标悬浮时的样式，也调整为更克制的效果 */
+.post-archive a:hover {
+  background-color: #fff;
+  border-color: #999;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); /* 增加一个非常轻微的阴影 */
+  transform: translateY(-2px); /* 向上轻微浮动 */
+}
