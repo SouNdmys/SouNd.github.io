@@ -5,4 +5,4 @@ type: about
 ---
 
 Memento mori
-Echoes of thought in the noise.
+Life is a miracle, a defiance of entropy and the void.
