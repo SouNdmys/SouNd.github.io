@@ -1,9 +1,15 @@
+<%# 渲染主要文章内容 %>
 <div class="post-main-content">
     <%- partial('_partial/article', {post: page, index: false}) %>
 </div>
 
+<%# 只有当文章的 front-matter 里有 toc: true 时，才加载我们的TOC容器和脚本 %>
 <% if (page.toc) { %>
-    <aside class="floating-toc">
-        <div class="toc-title">Table of Contents</div>
-        <div id="toc-container"></div>  </aside>
+    <aside class="smart-toc-container">
+        <div class="toc-title">Contents</div>
+        <div class="toc-content"></div>
+    </aside>
+
+    <%# 加载我们的终极脚本 %>
+    <%- js('js/smart-toc.js') %>
 <% } %>
