@@ -141,7 +141,7 @@ h1, h2, h3, h4, h5, h6 {
 /* 3. 如果您想让某些文字是“中等粗细”，可以单独设置 */
 strong, b {
   font-family: "Maple Mono SC NF", "霞鹜文楷", sans-serif !important;
-  font-weight: 500 !important; /* 精确对应我们加载的 Medium 500 字重 */
+  font-weight: 550 !important; /* 精确对应我们加载的 Medium 550 字重 */
 }
 
 /* --- 最终版响应式 TOC 样式 --- */
