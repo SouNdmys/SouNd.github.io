@@ -129,7 +129,7 @@ pre, code {
 /* 1. 为网站正文 (body) 应用“细体” */
 body {
   font-family: "Maple Mono SC NF", "霞鹜文楷", sans-serif !important;
-  font-weight: 300 !important; /* 精确对应我们加载的 Light 300 字重 */
+  font-weight: 400 !important; /* 精确对应我们加载的 Light 400 字重 */
 }
 
 /* 2. 为所有标题 (h1, h2, h3...) 应用“特粗体” */
