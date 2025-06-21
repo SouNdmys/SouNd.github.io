@@ -1,3 +1,9 @@
+<%# 新增的移动端导航汉堡按钮 %>
+<div class="mobile-nav-toggle">
+    <button id="mobile-nav-toggle-btn" aria-label="Toggle Navigation">☰</button>
+</div>
+
+<%# 您原来的 header 内容 %>
 <header id="header" class="clearfix" onclick="window.open('/', '_self')">
     <div class="site-name">
         <a href="<%- url_for() %>" id="logo" class="site-title">
@@ -23,3 +29,36 @@
         </script>
     </div>
 </div>
+
+<%# 新增的移动菜单面板的引入 %>
+<%- partial('_partial/mobile-nav') %>
+
+<%# 新增的控制移动菜单的 JavaScript %>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleBtn = document.getElementById('mobile-nav-toggle-btn');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+    const siteWrapper = document.getElementById('main-container'); // 我们假设您主内容区的ID是 main-container，如果不是，后面再改
+
+    if (toggleBtn && mobileNavPanel) {
+        toggleBtn.addEventListener('click', function(event) {
+            event.stopPropagation(); // 防止点击事件冒泡
+            document.body.classList.toggle('mobile-nav-active');
+            // 更新按钮文本
+            if (document.body.classList.contains('mobile-nav-active')) {
+                toggleBtn.innerHTML = '×'; // 显示关闭图标
+            } else {
+                toggleBtn.innerHTML = '☰'; // 显示汉堡图标
+            }
+        });
+
+        // 点击菜单外的任何地方，关闭菜单
+        document.addEventListener('click', function(event) {
+            if (document.body.classList.contains('mobile-nav-active') && !mobileNavPanel.contains(event.target)) {
+                document.body.classList.remove('mobile-nav-active');
+                toggleBtn.innerHTML = '☰';
+            }
+        });
+    }
+});
+</script>

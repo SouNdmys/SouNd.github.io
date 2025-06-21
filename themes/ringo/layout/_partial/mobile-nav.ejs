@@ -1,0 +1,10 @@
+<div id="mobile-nav-panel">
+    <nav class="mobile-nav">
+        <%# 这段代码会自动读取您主题 _config.yml 文件中的 menu 配置 %>
+        <% for (name in theme.menu) { %>
+            <a class="mobile-nav-link" href="<%- url_for(theme.menu[name]) %>">
+                <%= name %>
+            </a>
+        <% } %>
+    </nav>
+</div>
