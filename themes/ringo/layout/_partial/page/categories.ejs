@@ -13,7 +13,7 @@
         <% list.each(function (tag) { %>
         <article class="post post-atmain archive-model" itemscope="" itemtype="http://schema.org/BlogPosting">
           <h2 class="archive-title" itemprop="name headline">
-            <a class="post-title" itemprop="url" href="<%- url_for('/' + type + '/' + tag.name) %>">
+            <a class="post-title" itemprop="url" href="<%- url_for(tag.path) %>">
               <%= tag.name %>
             </a>
           </h2>

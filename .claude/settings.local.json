@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(hexo clean:*)",
+      "Bash(hexo generate:*)",
+      "Bash(hexo server:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": []
+  }
+}
